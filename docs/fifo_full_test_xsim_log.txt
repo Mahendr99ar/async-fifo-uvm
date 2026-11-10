@@ -1,0 +1,209 @@
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run all
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+tb_top: wclk=10ns rclk=17ns
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test fifo_full_test...
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               fifo_full_test          -     @341 
+  env                      fifo_env                -     @354 
+    ragt                   rd_agent                -     @372 
+      drv                  rd_driver               -     @548 
+        rsp_port           uvm_analysis_port       -     @567 
+        seq_item_port      uvm_seq_item_pull_port  -     @557 
+      mon                  rd_monitor              -     @577 
+        ap                 uvm_analysis_port       -     @586 
+      sqr                  uvm_sequencer           -     @411 
+        rsp_export         uvm_analysis_export     -     @420 
+        seq_item_export    uvm_seq_item_pull_imp   -     @538 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    sb                     fifo_scoreboard         -     @381 
+      rd_imp               uvm_analysis_imp_rd     -     @400 
+      wr_imp               uvm_analysis_imp_wr     -     @390 
+    wagt                   wr_agent                -     @363 
+      drv                  wr_driver               -     @741 
+        rsp_port           uvm_analysis_port       -     @760 
+        seq_item_port      uvm_seq_item_pull_port  -     @750 
+      mon                  wr_monitor              -     @770 
+        ap                 uvm_analysis_port       -     @779 
+      sqr                  uvm_sequencer           -     @604 
+        rsp_export         uvm_analysis_export     -     @613 
+        seq_item_export    uvm_seq_item_pull_imp   -     @731 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+--------------------------------------------------------------
+
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO ../../../../../tb/uvm/fifo_tests.svh(46) @ 0: uvm_test_top [TEST] fifo_full_test: 500 writes, wr_delay=[0:0] rd_delay=[3:8]
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 6265000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../../../../../tb/uvm/fifo_rd_agent.svh(99) @ 6265000: uvm_test_top.env.ragt.mon [RDMON] reads accepted=87 ignored(empty)=3  coverage=100.0%
+UVM_INFO ../../../../../tb/uvm/fifo_rd_agent.svh(102) @ 6265000: uvm_test_top.env.ragt.mon [RDMON]   cp_rinc=100.0% cp_rempty=100.0% x_inc_empty=100.0%
+UVM_INFO ../../../../../tb/uvm/fifo_scoreboard.svh(58) @ 6265000: uvm_test_top.env.sb [SB] matches=87 mismatches=0 peak_occupancy(model)=16
+UVM_INFO ../../../../../tb/uvm/fifo_wr_agent.svh(110) @ 6265000: uvm_test_top.env.wagt.mon [WRMON] writes accepted=87 dropped(full)=413  coverage=100.0%
+UVM_INFO ../../../../../tb/uvm/fifo_wr_agent.svh(113) @ 6265000: uvm_test_top.env.wagt.mon [WRMON]   cp_winc=100.0% cp_wfull=100.0% x_inc_full=100.0% cp_data=100.0%
+
+==============================================
+  fifo_full_test : PASSED
+==============================================
+
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 6265000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   12
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[NO_DPI_TSTNAME]     1
+[RDMON]     2
+[RNTST]     1
+[SB]     1
+[TEST]     1
+[TEST_DONE]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[WRMON]     2
+
+$finish called at time : 6265 ns : File "D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_top_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for all
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:01:36 . Memory (MB): peak = 1851.922 ; gain = 0.000
+create_wave_config fifo_wave
+fifo_wave
+add_wave /tb_top/dut/wclk /tb_top/dut/winc /tb_top/dut/wfull /tb_top/dut/rclk /tb_top/dut/rinc /tb_top/dut/rempty
+/tb_top/dut/wclk /tb_top/dut/winc /tb_top/dut/wfull /tb_top/dut/rclk /tb_top/dut/rinc /tb_top/dut/rempty
+add_wave -radix hex /tb_top/dut/wdata /tb_top/dut/rdata
+/tb_top/dut/wdata /tb_top/dut/rdata
+restart
+INFO: [Wavedata 42-604] Simulation restarted
+run all
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18601) @ 0: reporter [UVM/RELNOTES] 
+----------------------------------------------------------------
+UVM-1.2
+(C) 2007-2014 Mentor Graphics Corporation
+(C) 2007-2014 Cadence Design Systems, Inc.
+(C) 2006-2014 Synopsys, Inc.
+(C) 2011-2013 Cypress Semiconductor Corp.
+(C) 2013-2014 NVIDIA Corporation
+----------------------------------------------------------------
+
+  ***********       IMPORTANT RELEASE NOTES         ************
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_NO_DEPRECATED undefined.
+
+  You are using a version of the UVM library that has been compiled
+  with `UVM_OBJECT_DO_NOT_NEED_CONSTRUCTOR undefined.
+
+      (Specify +UVM_NO_RELNOTES to turn off this notice)
+
+tb_top: wclk=10ns rclk=17ns
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18648) @ 0: reporter [NO_DPI_TSTNAME] UVM_NO_DPI defined--getting UVM_TESTNAME directly, without DPI
+UVM_INFO @ 0: reporter [RNTST] Running test fifo_full_test...
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(18752) @ 0: reporter [UVMTOP] UVM testbench topology:
+--------------------------------------------------------------
+Name                       Type                    Size  Value
+--------------------------------------------------------------
+uvm_test_top               fifo_full_test          -     @341 
+  env                      fifo_env                -     @354 
+    ragt                   rd_agent                -     @372 
+      drv                  rd_driver               -     @548 
+        rsp_port           uvm_analysis_port       -     @567 
+        seq_item_port      uvm_seq_item_pull_port  -     @557 
+      mon                  rd_monitor              -     @577 
+        ap                 uvm_analysis_port       -     @586 
+      sqr                  uvm_sequencer           -     @411 
+        rsp_export         uvm_analysis_export     -     @420 
+        seq_item_export    uvm_seq_item_pull_imp   -     @538 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+    sb                     fifo_scoreboard         -     @381 
+      rd_imp               uvm_analysis_imp_rd     -     @400 
+      wr_imp               uvm_analysis_imp_wr     -     @390 
+    wagt                   wr_agent                -     @363 
+      drv                  wr_driver               -     @741 
+        rsp_port           uvm_analysis_port       -     @760 
+        seq_item_port      uvm_seq_item_pull_port  -     @750 
+      mon                  wr_monitor              -     @770 
+        ap                 uvm_analysis_port       -     @779 
+      sqr                  uvm_sequencer           -     @604 
+        rsp_export         uvm_analysis_export     -     @613 
+        seq_item_export    uvm_seq_item_pull_imp   -     @731 
+        arbitration_queue  array                   0     -    
+        lock_queue         array                   0     -    
+        num_last_reqs      integral                32    'd1  
+        num_last_rsps      integral                32    'd1  
+--------------------------------------------------------------
+
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(20867) @ 0: reporter [UVM/COMP/NAMECHECK] This implementation of the component name checks requires DPI to be enabled
+UVM_INFO ../../../../../tb/uvm/fifo_tests.svh(46) @ 0: uvm_test_top [TEST] fifo_full_test: 500 writes, wr_delay=[0:0] rd_delay=[3:8]
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(19968) @ 6265000: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+UVM_INFO ../../../../../tb/uvm/fifo_rd_agent.svh(99) @ 6265000: uvm_test_top.env.ragt.mon [RDMON] reads accepted=87 ignored(empty)=3  coverage=100.0%
+UVM_INFO ../../../../../tb/uvm/fifo_rd_agent.svh(102) @ 6265000: uvm_test_top.env.ragt.mon [RDMON]   cp_rinc=100.0% cp_rempty=100.0% x_inc_empty=100.0%
+UVM_INFO ../../../../../tb/uvm/fifo_scoreboard.svh(58) @ 6265000: uvm_test_top.env.sb [SB] matches=87 mismatches=0 peak_occupancy(model)=16
+UVM_INFO ../../../../../tb/uvm/fifo_wr_agent.svh(110) @ 6265000: uvm_test_top.env.wagt.mon [WRMON] writes accepted=87 dropped(full)=413  coverage=100.0%
+UVM_INFO ../../../../../tb/uvm/fifo_wr_agent.svh(113) @ 6265000: uvm_test_top.env.wagt.mon [WRMON]   cp_winc=100.0% cp_wfull=100.0% x_inc_full=100.0% cp_data=100.0%
+
+==============================================
+  fifo_full_test : PASSED
+==============================================
+
+UVM_INFO D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv(13673) @ 6265000: reporter [UVM/REPORT/SERVER] 
+--- UVM Report Summary ---
+
+** Report counts by severity
+UVM_INFO :   12
+UVM_WARNING :    0
+UVM_ERROR :    0
+UVM_FATAL :    0
+** Report counts by id
+[NO_DPI_TSTNAME]     1
+[RDMON]     2
+[RNTST]     1
+[SB]     1
+[TEST]     1
+[TEST_DONE]     1
+[UVM/COMP/NAMECHECK]     1
+[UVM/RELNOTES]     1
+[UVMTOP]     1
+[WRMON]     2
+
+$finish called at time : 6265 ns : File "D:/2025.2/Vivado/data/system_verilog/uvm_1.2/xlnx_uvm_package.sv" Line 18699

@@ -1,0 +1,20 @@
+# Vivado / xsim outputs
+xsim.dir/
+xsim.covdb/
+cov_report/
+*.jou
+*.log
+*.pb
+*.wdb
+*.str
+.Xil/
+webtalk*
+# Icarus / waveforms
+*.vvp
+*.vcd
+*.fst
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+vivado_proj/
